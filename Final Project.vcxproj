@@ -71,8 +71,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>E:\4-2\Lab\Computer Graphics\GLFW GLAD Installation Using Visual Studio 2022\opengl\include;$(IncludePath)</IncludePath>
-    <LibraryPath>E:\4-2\Lab\Computer Graphics\GLFW GLAD Installation Using Visual Studio 2022\opengl\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Graphics\opengl\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Graphics\opengl\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -152,7 +152,7 @@
     <None Include="vertexShader.vs" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\GLFW GLAD Installation Using Visual Studio 2022\opengl\glad.c" />
+    <ClCompile Include="..\..\..\..\..\Graphics\opengl\lib\glad.c" />
     <ClCompile Include="image_loader.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

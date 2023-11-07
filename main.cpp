@@ -132,7 +132,7 @@ int main()
 
     // glfw window creation
     // --------------------
-    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Cafeteria - Pial 1807040", NULL, NULL);
+    GLFWwindow* window = glfwCreateWindow(SCR_WIDTH, SCR_HEIGHT, "Resort - Amdadul 1807107", NULL, NULL);
     if (window == NULL)
     {
         std::cout << "Failed to create GLFW window" << std::endl;
@@ -468,9 +468,6 @@ int main()
         float fixY = 0.45f;
         float chairX = 0.1f;
 
-
-
-
         //********** Object making ***********
 
         glActiveTexture(GL_TEXTURE0);
@@ -479,48 +476,46 @@ int main()
         color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
         Grasses(ourShader, translateMatrix, color1);
 
-        
-
         //Floor
-        translateMatrix = glm::translate(identityMatrix, glm::vec3(0.0f, 0.0f, 0.0f));
+        /*translateMatrix = glm::translate(identityMatrix, glm::vec3(0.0f, 0.0f, 0.0f));
         color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-        Floor(ourShader, translateMatrix, color1);
+        Floor(ourShader, translateMatrix, color1);*/
 
-        //Pillars
+        ////Pillars
         translateMatrix = glm::translate(identityMatrix, glm::vec3(0.0f, 0.0f, 0.0f));
         color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
         Pillars(ourShader, translateMatrix, color1);
 
 
-        //Choto red bricks blocks
-        translateMatrix = glm::translate(identityMatrix, glm::vec3(0.5, 3.5f + 1.5, -0.2+0.05f));
-        color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-        ChotoBlocks(ourShader, translateMatrix, color1);
-        //Choto red bricks blocks 2 
-        translateMatrix = glm::translate(identityMatrix, glm::vec3(3.5  + 0.5, 3.5f + 1.5, -0.2 + 0.05f));
-        color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-        ChotoBlocks(ourShader, translateMatrix, color1);
+        ////Choto red bricks blocks
+        //translateMatrix = glm::translate(identityMatrix, glm::vec3(0.5, 3.5f + 1.5, -0.2+0.05f));
+        //color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+        //ChotoBlocks(ourShader, translateMatrix, color1);
+        ////Choto red bricks blocks 2 
+        //translateMatrix = glm::translate(identityMatrix, glm::vec3(3.5  + 0.5, 3.5f + 1.5, -0.2 + 0.05f));
+        //color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+        //ChotoBlocks(ourShader, translateMatrix, color1);
 
-        int dx = 1.8;
-        for (int i = 0; i < 4; i++) {
-            //Choto red bricks blocks 2 
-            translateMatrix = glm::translate(identityMatrix, glm::vec3(7.5 + 0.5*i +dx, 3.5f + 1.5, -0.2 + 0.05f));
-            color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-            ChotoBlocks(ourShader, translateMatrix, color1);
-            dx += 3.0;
+        //int dx = 1.8;
+        //for (int i = 0; i < 4; i++) {
+        //    //Choto red bricks blocks 2 
+        //    translateMatrix = glm::translate(identityMatrix, glm::vec3(7.5 + 0.5*i +dx, 3.5f + 1.5, -0.2 + 0.05f));
+        //    color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+        //    ChotoBlocks(ourShader, translateMatrix, color1);
+        //    dx += 3.0;
 
-        }
+        //}
 
 
-        //Choto red bricks blocks
-        translateMatrix = glm::translate(identityMatrix, glm::vec3(30-3.0, 3.5f + 1.5, -0.2 + 0.05f));
-        color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-        ChotoBlocks(ourShader, translateMatrix, color1);
+        ////Choto red bricks blocks
+        //translateMatrix = glm::translate(identityMatrix, glm::vec3(30-3.0, 3.5f + 1.5, -0.2 + 0.05f));
+        //color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+        //ChotoBlocks(ourShader, translateMatrix, color1);
 
-        //Choto red bricks blocks 2 
-        translateMatrix = glm::translate(identityMatrix, glm::vec3(30-3.85 - 3.0, 3.5f + 1.5, -0.2 + 0.05f));
-        color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
-        ChotoBlocks(ourShader, translateMatrix, color1);
+        ////Choto red bricks blocks 2 
+        //translateMatrix = glm::translate(identityMatrix, glm::vec3(30-3.85 - 3.0, 3.5f + 1.5, -0.2 + 0.05f));
+        //color1 = glm::vec4(1.0f, 1.0f, 1.0f, 1.0f);
+        //ChotoBlocks(ourShader, translateMatrix, color1);
 
        
        
@@ -564,8 +559,6 @@ void Grasses(Shader ourShader, glm::mat4 moveMatrix, glm::vec4 color)
     ourShader.setFloat("material.shininess", 32.0f);
     glBindTexture(GL_TEXTURE_2D, texture1);
     glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
-
-
 }
 
 void Floor(Shader ourShader, glm::mat4 moveMatrix, glm::vec4 color)
@@ -752,11 +745,9 @@ void Pillars(Shader ourShader, glm::mat4 moveMatrix, glm::vec4 color) {
     ourShader.setVec4("material.diffuse", color);
     ourShader.setVec4("material.specular", color);
     ourShader.setFloat("material.shininess", 32.0f);
-    
     glDrawElements(GL_TRIANGLES, 36, GL_UNSIGNED_INT, 0);
 
     //right Side shamner Pillar Shirir
-
     translateMatrix = glm::translate(identityMatrix, glm::vec3(15.0 + 7.5, 0.0, -0.2f));
     scaleMatrix = glm::scale(identityMatrix, glm::vec3(0.6f, 20.0f, 0.8f));
     model = translateMatrix * scaleMatrix;
